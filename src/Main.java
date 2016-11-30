@@ -21,7 +21,7 @@ public class Main implements ActionListener {
         Main main = new Main();
 
         JButton button = new JButton("Lel");
-        
+
         JTextArea textArea = new JTextArea("Test the TextField.");
         JScrollPane scrollPane = new JScrollPane(textArea);
         scrollPane.setPreferredSize(new Dimension(400, 200));
