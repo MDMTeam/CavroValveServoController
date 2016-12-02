@@ -42,11 +42,11 @@ public class Main implements ActionListener {
     }
 
     public void initJThings(){
-        initj.buttonPlus.setBounds(400, 200, 100, 50);
-        initj.commandLine.setBounds(10, 10, 200, 200);
+        initj.buttonPlus.setBounds(420, 200, 100, 50);
+        initj.commandLine.setBounds(10, 10, 400, 400);
         initj.commandLine.setBorder(initj.border);
-        initj.commandLine.setEditable(false);
-
+        initj.status.setCaretPosition(initj.status.getDocument().getLength());
+        initj.status.setEditable(false);
     }
 
     public void setActionListener() {
@@ -54,9 +54,8 @@ public class Main implements ActionListener {
         initj.buttonPlus.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 clicks++;
-                initj.commandLine.append("\nButton was pressed " + clicks + " times.");
-                DefaultCaret caret = (DefaultCaret) initj.commandLine.getCaret();
-                caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
+                initj.status.append("\nButton was pressed " + clicks + " times.");
+
             }
         } );
 
@@ -65,6 +64,7 @@ public class Main implements ActionListener {
     public void addJThings() {
         f.add(initj.buttonPlus);
         f.add(initj.commandLine);
+
     }
 
     @Override

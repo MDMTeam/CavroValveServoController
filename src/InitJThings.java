@@ -8,7 +8,8 @@ public class InitJThings {
     JFrame f = new JFrame();
     JButton buttonPlus = new JButton("Hello");
 
-    JTextArea commandLine = new JTextArea("Status: Initiated!");
+    JTextArea status = new JTextArea("Status: Initiated!");
+    JScrollPane commandLine = new JScrollPane(status, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
     Border border = BorderFactory.createLineBorder(Color.BLACK);
 
 
