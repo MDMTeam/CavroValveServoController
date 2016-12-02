@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.text.DefaultCaret;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,7 +13,6 @@ public class Main implements ActionListener {
     private static Dimension size = new Dimension(WIDTH, HEIGHT);
 
     private static final String title = "Carvo Servo Controller";
-    private static String write = "Status: ONLINE";
 
     public static int clicks = 0;
 
@@ -23,7 +21,7 @@ public class Main implements ActionListener {
         Main main = new Main();
         main.frameInit();
         main.initJThings();
-        main.setActionListener();
+        main.setActionListeners();
         main.addJThings();
 
     }
@@ -50,7 +48,7 @@ public class Main implements ActionListener {
         initj.status.setEditable(false);
     }
 
-    public void setActionListener() {
+    public void setActionListeners() {
 
         initj.buttonPlus.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

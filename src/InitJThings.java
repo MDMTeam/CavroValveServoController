@@ -1,6 +1,5 @@
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.text.DefaultCaret;
 import java.awt.*;
 
 public class InitJThings {
@@ -9,7 +8,7 @@ public class InitJThings {
     JButton buttonPlus = new JButton("Hello");
     JButton buttonExit = new JButton("Exit...");
 
-    JTextArea status = new JTextArea("Status: Initiated!");
+    JTextArea status = new JTextArea("Status: INITIATED");
     JScrollPane commandLine = new JScrollPane(status, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
     Border border = BorderFactory.createLineBorder(Color.BLACK);
 
